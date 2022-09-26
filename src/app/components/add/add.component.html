@@ -1,0 +1,266 @@
+<h3>Add/update Data</h3>
+<hr>
+
+
+
+<div class="container -fluid">
+  <form > 
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="exampleInputPassword1">GST</label>
+                <input type="text" class="form-control"name="gst"[(ngModel)]="groups.gst" placeholder="enter GST number">
+              </div>
+        </div>
+
+        <div class="col-4">
+            <div class="form-group">
+                <label for="exampleInputPassword1">Pan number</label>
+                <input type="text" class="form-control"name="pannumber"[(ngModel)]="groups.pannumber"  placeholder="EXHYTHSTWG">
+              </div>
+         </div>
+
+         <div class="col-4">
+            <div class="form-group">
+                <label class="text-danger" for="exampleInputPassword1">code</label>
+                <input type="number" class="form-control" name="code" [(ngModel)]="groups.code"placeholder="Enter code">
+              </div>
+         </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-4">
+          <div class="form-group">
+              <label class="text-danger" for="exampleInputPassword1">Name</label>
+              <input type="text" class="form-control"name="names"[(ngModel)]="groups.names"  placeholder="Enter name">
+            </div>
+      </div>
+
+      <div class="col-4">
+        <div class="form-group">
+            <label for="exampleInputPassword1">Address</label>
+            <textarea class="form-control"name="address"[(ngModel)]="groups.address" id="exampleFormControlTextarea4"placeholder="enter address" rows="3"></textarea>
+          </div>
+     </div>
+
+     <div class="col-4">
+        <div class="form-group">
+            <label  for="exampleInputPassword1">pin code</label>
+            <input type="number" class="form-control" name="pincode"[(ngModel)]="groups.pincode" placeholder="Pincode">
+          </div>
+     </div>
+</div>
+
+<br>
+
+
+<div class="row">
+  <div class="col-4">
+   
+    <mat-form-field appearance="outline"[style.width.px]=337>
+      <mat-label>Country</mat-label>
+      <mat-select [(ngModel)]="groups.country"name="country">
+        <mat-option *ngFor="let countri of country" [value]="countri.value">
+          {{countri.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    </div>
+
+ 
+  <div class="col-4">
+   
+    <mat-form-field appearance="outline"[style.width.px]=337>
+      <mat-label>State</mat-label>
+      <mat-select [(ngModel)]="groups.state"name="state">
+        <mat-option *ngFor="let states of state" [value]="states.value">
+          {{states.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    </div>
+   
+   
+    <div class="col-4">
+   
+      <mat-form-field appearance="outline"[style.width.px]=337>
+        <mat-label>City</mat-label>
+        <mat-select name="city"[(ngModel)]="groups.city" >
+          <mat-option *ngFor="let citie of city" [value]="citie.value">
+            {{citie.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div>
+
+
+
+
+
+    <div class="col-4">
+        
+    </div>
+
+    <div class="col-4">
+        <div class="form-group">
+            <label for="exampleInputPassword1">Mobile number</label>
+            <input type="number" class="form-control"name="phone"[(ngModel)]="groups.phone"  placeholder="XX12454545">
+          </div>
+     </div>
+
+     <div class="col-4">
+        <div class="form-group">
+            <label  for="exampleInputPassword1">Email</label>
+            <input type="email" class="form-control"name="mail"[(ngModel)]="groups.mail" placeholder="Enter Email">
+          </div>
+     </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-4">
+        <div class="form-group">
+            <label for="exampleInputPassword1">Latitude</label>
+            <input type="text" class="form-control"name="latitude" [(ngModel)]="groups.latitude"placeholder="enter latitude">
+          </div>
+    </div>
+
+    <div class="col-4">
+        <div class="form-group">
+            <label for="exampleInputPassword1">Longitude</label>
+            <input type="text" class="form-control"name="longitude"[(ngModel)]="groups.longitude" placeholder="enter longitude">
+          </div>
+     </div>
+
+     <div class="col-4 mt-2">
+
+      <mat-form-field appearance="outline"[style.width.px]=337>
+        <mat-label>Currency</mat-label>
+        <mat-select [(ngModel)]="groups.currency"name="currency" >
+          <mat-option *ngFor="let currencies of currency" [value]="currencies.value">
+            {{currencies.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div>
+
+</div>
+<br>
+</form>
+
+
+<!---- *********************************************************************************************  -->
+
+
+
+<!---       contact person details               -->
+<hr>
+<h4 class="text-align:center!important;">...Contact person details...</h4>
+<hr>
+
+
+<div class="container -fluid">
+  <form [formGroup]="employeeform"> 
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label class="text-danger"for="exampleInputPassword1">Name</label>
+                <input type="name"formControlName="name"[(ngModel)]="empy.name" class="form-control" placeholder="enter your name">
+              </div>
+        </div>
+
+        <div class="col-4">
+            <div class="form-group">
+                <label class="text-danger"for="exampleInputPassword1">Mobile</label>
+                <input type="number"formControlName="mobile"[(ngModel)]="empy.mobile" class="form-control"  placeholder="X1211211">
+              </div>
+         </div>
+
+         <div class="col-4">
+            <div class="form-group">
+                <label  for="exampleInputPassword1">Email</label>
+                <input type="email"formControlName="email" class="form-control"[(ngModel)]="empy.email"  placeholder="Enter email id">
+              </div>
+         </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label class="text-danger" for="exampleInputPassword1">Department</label>
+                <input type="name" formControlName="department"class="form-control"[(ngModel)]="empy.department"  placeholder="Enter department">
+              </div>
+        </div>
+    
+        <div class="col-4">
+            <div class="form-group">
+                <label class="text-danger" for="exampleInputPassword1">Designation</label>
+                <input type="name" formControlName="designation"class="form-control"[(ngModel)]="empy.designation"  placeholder="Enter designation">
+              </div>
+            
+         </div>
+    
+       
+         <div class="col-4">
+          <br>
+          <div style="text-align:center;justify-content: space-between;"> 
+               <button (click)="add()"*ngIf="!isEdit"[disabled]="employeeform.invalid"class="btn btn-success">+ Add </button> &nbsp;
+               <button (click)="updateuser()"*ngIf="isEdit"[disabled]="employeeform.invalid"class="btn btn-warning">+ update </button> &nbsp;
+               <button (click)="clear()"*ngIf="!isEdit"class="btn btn-danger"> X Cancel </button>
+            </div>   
+          
+         
+          </div>   
+            
+    </div>
+    </form>
+</div>
+
+
+
+
+<hr> <br>
+<hr>
+
+
+  <table class="table mt-5">
+    <thead>
+      <tr >
+        <th scope="col">Name</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Email</th>
+        <th scope="col">Department</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+
+      </tr>
+    </thead>
+    
+    <tbody>
+    
+    <tr *ngFor ="let user of alluser" >  
+  <td>{{user.name}}</td>
+  <td>{{user.mobile}}</td>
+  <td>{{user.email}}</td>
+  <td>{{user.department}}</td>
+  <td>{{user.designation}}</td>
+
+  <td><i (click)="edituser(user)"  class="fa-solid fa-pen-to-square"></i> </td>
+  <i (click)="deleteuser(user)"  class="fa fa-trash" aria-hidden="true"></i>
+ 
+  
+    </tr>
+       </tbody>
+      </table>
+
+      <p *ngIf="alluser.length == 0" style="text-align: center;color: red;" >No data to fetch please add data </p>
+
+
+<!--last-->
+  <div class="row">
+    <div style="text-align: center;"class="col-12">
+        <button (click)="createsubmit()"class="btn btn-success">Save </button> &nbsp;
+               <button (click)="clearout()"class="btn btn-danger"> Cancel </button>
+    </div>

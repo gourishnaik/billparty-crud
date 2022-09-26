@@ -1,0 +1,48 @@
+<div class="container-fluid">
+<h3 routerLink="/" style="cursor: pointer;">Bill to party Master</h3>  
+<hr>
+
+<table class="table ">
+    
+    <thead>
+      <tr >
+        <th scope="col">action</th>
+        <th scope="col">client</th>
+        <th scope="col">code</th>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">country</th>
+        <th scope="col">State</th>
+        <th scope="col">city</th>
+        <th scope="col">mobile</th>
+        <th scope="col">email</th>
+        <th scope="col">Gst</th>
+        <th scope="col">pan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let user of alluser">
+        <td > <a routerLink="/watchdata/view/{{user.id}}"> <i style="color:green;margin-right: 5px;"class="fa fa-eye" aria-hidden="true"></i> </a>
+           <a routerLink="/editdata/update/{{user.id}}"><i style="color:blue;margin-right: 5px;"class='fas fa-pencil-alt'></i> </a>
+            <i (click)="deleteuser(user)" style="color:orange;margin-right: 5px;"class="fa fa-trash" aria-hidden="true"></i>   
+        </td >
+        
+        <td>{{user.names}}</td>
+        <td>{{user.code}}</td>
+        <td>{{user.names}}</td>
+        <td>{{user.address}}</td>
+        <td>{{user.country}}</td>
+        <td>{{user.state}}</td>
+        <td>{{user.city}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.mail}}</td>
+        <td>{{user.gst}}</td>
+        <td>{{user.pannumber}}</td>
+        
+      </tr>
+     
+   
+    </tbody>
+  </table>
+</div>
+
