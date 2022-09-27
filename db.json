@@ -119,6 +119,23 @@
       "longitude": "258",
       "currency": "dollar",
       "id": 7
+    },
+    {
+      "gst": "SGAFT125",
+      "pannumber": "PGHTAJ094",
+      "code": 12546,
+      "names": "rakesh",
+      "address": "karwar",
+      "pincode": 581317,
+      "country": "india",
+      "state": "karnataka",
+      "city": "bangaluru",
+      "phone": 9696969696,
+      "mail": "abhish@gmail.com",
+      "latitude": "120.33",
+      "longitude": "44.55",
+      "currency": "rupee",
+      "id": 8
     }
   ]
 }
