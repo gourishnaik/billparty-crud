@@ -68,6 +68,7 @@ this.viewservice.fetchdata(this.dataid).subscribe((data:any)=>{
 
 update(){
   this.getlatest();
+  alert("data updated sucessfully!!")
   this.viewservice.updatedata(this.groups,this.dataid).subscribe((data:any)=>{
     this.router.navigate(['/view'])
 
