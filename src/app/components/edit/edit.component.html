@@ -4,56 +4,76 @@
 
 
 <div class="container -fluid">
-  <form > 
-    <div class="row">
-        <div class="col-4">
-            <div class="form-group">
-                <label for="exampleInputPassword1">GST</label>
-                <input type="text" class="form-control"name="gst"[(ngModel)]="groups.gst" placeholder="enter GST number">
-              </div>
-        </div>
-
-        <div class="col-4">
-            <div class="form-group">
-                <label for="exampleInputPassword1">Pan number</label>
-                <input type="text" class="form-control"name="pannumber"[(ngModel)]="groups.pannumber"  placeholder="EXHYTHSTWG">
-              </div>
-         </div>
-
-         <div class="col-4">
-            <div class="form-group">
-                <label class="text-danger" for="exampleInputPassword1">code</label>
-                <input type="number" class="form-control" name="code" [(ngModel)]="groups.code"placeholder="Enter code">
-              </div>
-         </div>
-    </div>
-
-
+  <form #formData="ngForm" > 
+    
 
     <div class="row">
       <div class="col-4">
           <div class="form-group">
-              <label class="text-danger" for="exampleInputPassword1">Name</label>
-              <input type="text" class="form-control"name="names"[(ngModel)]="groups.names"  placeholder="Enter name">
+              <label for="exampleInputPassword1">GST</label>
+              <input type="text"gst="ngModel" #gst="ngModel"required class="form-control"name="gst"[(ngModel)]="groups.gst" placeholder="enter GST number">
             </div>
-      </div>
+      
+      <div *ngIf="gst.invalid && (gst.dirty || gst.touched)"
+      class="alert alert-danger">
+   <div *ngIf="gst.errors">
+               Gst number is required
+   </div>
+ </div>
+ </div>
 
-      <div class="col-4">
-        <div class="form-group">
-            <label for="exampleInputPassword1">Address</label>
-            <textarea class="form-control"name="address"[(ngModel)]="groups.address" id="exampleFormControlTextarea4"placeholder="enter address" rows="3"></textarea>
-          </div>
-     </div>
-
-     <div class="col-4">
-        <div class="form-group">
-            <label  for="exampleInputPassword1">pin code</label>
-            <input type="text" class="form-control" name="pincode"[(ngModel)]="groups.pincode" placeholder="Pincode">
-          </div>
-     </div>
+ <div class="col-4">
+  <div class="form-group">
+      <label for="exampleInputPassword1">Pan number</label>
+      <input type="text"pannumber="ngModel"#pannumber="ngModel"required class="form-control"name="pannumber"[(ngModel)]="groups.pannumber"  placeholder="EXHYTHSTWG">
+    </div>
+    <div *ngIf="pannumber.invalid && (pannumber.dirty || pannumber.touched)"
+    class="alert alert-danger">
+ <div *ngIf="pannumber.errors">
+             pannumber number is required
+ </div>
+</div>
 </div>
 
-<br>
+<div class="col-4">
+  <div class="form-group">
+      <label class="text-danger" for="exampleInputPassword1">code</label>
+      <input type="number"code="ngModel"#code="ngModel"required  class="form-control" name="code" [(ngModel)]="groups.code"placeholder="Enter code">
+    </div>
+    <div *ngIf="code.invalid && (code.dirty || code.touched)"
+    class="alert alert-danger">
+ <div *ngIf="code.errors">
+             code number is required
+ </div>
+</div>
+</div>
+
+
+</div>
+
+<div class="row">
+  <div class="col-4">
+      <div class="form-group">
+          <label class="text-danger" for="exampleInputPassword1">Name</label>
+          <input type="text" class="form-control"name="names"[(ngModel)]="groups.names"  placeholder="Enter name">
+        </div>
+  </div>
+
+  <div class="col-4">
+    <div class="form-group">
+        <label for="exampleInputPassword1">Address</label>
+        <textarea class="form-control"name="address"[(ngModel)]="groups.address" id="exampleFormControlTextarea4"placeholder="enter address" rows="3"></textarea>
+      </div>
+ </div>
+
+ <div class="col-4">
+    <div class="form-group">
+        <label  for="exampleInputPassword1">pin code</label>
+        <input type="text" class="form-control" name="pincode"[(ngModel)]="groups.pincode" placeholder="Pincode">
+      </div>
+ </div>
+</div>
+
 
 
 <div class="row">
@@ -70,7 +90,7 @@
     </div>
 
  
-  <div class="col-4">
+  <div class="col-4 mt-2">
    
     <mat-form-field appearance="outline"[style.width.px]=337>
       <mat-label>State</mat-label>
@@ -144,14 +164,18 @@
         </mat-select>
       </mat-form-field>
       </div>
-
 </div>
 <br>
+
+
+
 </form>
+
+
 
 <div class="row">
     <div style="text-align: center;"class="col-12">
-        <button (click)="update()"  routerLink="/view" class="btn btn-warning">UPDATE</button> &nbsp;
-      <button   routerLink="/view" class="btn btn-success">BACK</button> &nbsp;    
-        <button routerLink="/" class="btn btn-primary">HOME </button> 
-</div>
+        <button (click)="update()"  [disabled] = "formData.form.invalid" routerLink="/view" class="btn btn-warning">UPDATE</button> &nbsp;
+        <button   routerLink="/view" class="btn btn-success">BACK</button> &nbsp;   
+        <button routerLink="/" class="btn btn-primary">HOME </button>    
+    </div>

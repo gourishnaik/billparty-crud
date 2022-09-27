@@ -25,6 +25,8 @@ interface countri {
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
+  formData: any = {};
+  //ngform:any = {};
   public groups: igroups = {} as igroups;
   public dataid: any;
   public data: any;
@@ -51,6 +53,7 @@ export class EditComponent implements OnInit {
   constructor(private Activatedroute: ActivatedRoute,private viewservice: ViewService,private router: Router) { }
 
   ngOnInit(): void {
+    this.getlatest(); //getting data before refresh
     this.Activatedroute.paramMap.subscribe((param: Params) => {
       this.dataid = param.get('dataid');
     })
@@ -64,11 +67,16 @@ this.viewservice.fetchdata(this.dataid).subscribe((data:any)=>{
   }
 
 update(){
+  this.getlatest();
   this.viewservice.updatedata(this.groups,this.dataid).subscribe((data:any)=>{
     this.router.navigate(['/view'])
-  },err=>{
-    alert("something went wrong");
+
   })
 }
+//getting data before refresh
+getlatest(){
+  this.viewservice.getuser();
+}
+
 
 }
