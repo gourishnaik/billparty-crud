@@ -9,6 +9,7 @@ import { ViewService } from 'src/app/services/view.service';
 export class ViewComponent implements OnInit {
   public groups: igroups = {} as igroups;
   alluser:any;
+  userFilter:any={names:'',};
   constructor(private viewservice: ViewService) { }
 
   ngOnInit(): void {
