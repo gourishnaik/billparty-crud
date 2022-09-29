@@ -106,9 +106,18 @@ export class AddComponent implements OnInit {
   }
 
   edituser(user) {
-    this.isEdit = true;
-    this.empy = user;
+  this.isEdit = true;
+   this.empy = user;
+   this.employeeform.controls['name'].setValue(user.name)
+   this.employeeform.controls['mobile'].setValue(user.mobile)
+   this.employeeform.controls['email'].setValue(user.email)
+   this.employeeform.controls['department'].setValue(user.department)
+   this.employeeform.controls['designation'].setValue(user.designation)
+   
   }
+
+
+
   clear() {
     this.isEdit = false;
 this.employeeform.reset();
@@ -116,6 +125,7 @@ this.employeeform.reset();
   updateuser() {
     this.isEdit = !this.isEdit;
     this.employeeservice.updateuser(this.empy).subscribe(() => {
+      alert("updated sucessfully!!!")
       this.getLatestUser()
       this.employeeform.reset();
     })

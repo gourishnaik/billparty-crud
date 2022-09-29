@@ -2,10 +2,10 @@
   "posts": [
     {
       "name": "jayesh",
-      "mobile": 9696965899,
+      "mobile": 9696965892,
       "email": "jayesh@gmail.com",
       "department": "chemistry",
-      "designation": "developer",
+      "designation": "developers",
       "id": 1
     },
     {
@@ -15,6 +15,14 @@
       "department": "chemistry",
       "designation": "web developer",
       "id": 2
+    },
+    {
+      "name": "max",
+      "mobile": 7849451845,
+      "email": "max@gmail.com",
+      "department": "botony",
+      "designation": "assistant",
+      "id": 3
     }
   ],
   "users": [
@@ -39,7 +47,7 @@
       "gst": "567XGGG",
       "pannumber": "CGSDJS12",
       "code": 12545,
-      "names": "Jackma",
+      "names": "Jackmak",
       "address": "mumbai",
       "pincode": "145451",
       "country": "india",
