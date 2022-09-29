@@ -105,9 +105,9 @@ export class AddComponent implements OnInit {
       })
   }
 
-  edituser(user) {
+  edituser(user:any) {
   this.isEdit = true;
-   this.empy = user;
+   this.empy= user;
    this.employeeform.controls['name'].setValue(user.name)
    this.employeeform.controls['mobile'].setValue(user.mobile)
    this.employeeform.controls['email'].setValue(user.email)
@@ -123,11 +123,12 @@ export class AddComponent implements OnInit {
 this.employeeform.reset();
   }
   updateuser() {
-    this.isEdit = !this.isEdit;
+   
     this.employeeservice.updateuser(this.empy).subscribe(() => {
-      alert("updated sucessfully!!!")
-      this.getLatestUser()
       this.employeeform.reset();
+      this.getLatestUser();
+      alert("updated sucessfully!!!")
+      this.isEdit = !this.isEdit;
     })
   }
 
