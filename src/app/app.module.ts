@@ -13,6 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { WatchdataComponent } from './components/watchdata/watchdata.component';
 import { EditComponent } from './components/edit/edit.component'
 import { FilterPipeModule } from 'ngx-filter-pipe';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import { FilterPipeModule } from 'ngx-filter-pipe';
     BrowserAnimationsModule,
     MatSelectModule,
     FilterPipeModule,
+    MatInputModule,
     MatFormFieldModule
 
   ],

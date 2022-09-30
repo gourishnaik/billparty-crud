@@ -146,6 +146,7 @@ this.employeeform.reset();
 
 
   }
+
   clearout(){
     this.groups.address='';
     this.groups.city='';
@@ -161,7 +162,10 @@ this.employeeform.reset();
     this.groups.phone='';
     this.groups.pincode='';
     this.groups.state='';
-    alert('form cleared sucessfully!!')
+    alert('form is been cleared ')
+  
+
+
   }
 
 
