@@ -9,11 +9,12 @@
 
     <div class="row">
       <div class="col-4">
-          <div class="form-group">
-              <label for="exampleInputPassword1">GST</label>
-              <input type="text"gst="ngModel" #gst="ngModel"required class="form-control"name="gst"[(ngModel)]="groups.gst" placeholder="enter GST number">
-            </div>
-      
+
+            <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+              <mat-label>GST</mat-label>
+              <input matInput name="gst"[(ngModel)]="groups.gst"#gst="ngModel"required placeholder="X1RTSGJJ " >
+            </mat-form-field>  
+           
       <div *ngIf="gst.invalid && (gst.dirty || gst.touched)"
       class="alert alert-danger">
    <div *ngIf="gst.errors">
@@ -23,10 +24,11 @@
  </div>
 
  <div class="col-4">
-  <div class="form-group">
-      <label for="exampleInputPassword1">Pan number</label>
-      <input type="text"pannumber="ngModel"#pannumber="ngModel"required class="form-control"name="pannumber"[(ngModel)]="groups.pannumber"  placeholder="EXHYTHSTWG">
-    </div>
+    <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+      <mat-label>Pan Number</mat-label>
+      <input matInput name="pannumber"#pannumber="ngModel"required [(ngModel)]="groups.pannumber" placeholder="NHGDFRG73S" >
+    </mat-form-field>
+
     <div *ngIf="pannumber.invalid && (pannumber.dirty || pannumber.touched)"
     class="alert alert-danger">
  <div *ngIf="pannumber.errors">
@@ -36,10 +38,11 @@
 </div>
 
 <div class="col-4">
-  <div class="form-group">
-      <label class="text-danger" for="exampleInputPassword1">code</label>
-      <input type="number"code="ngModel"#code="ngModel"required  class="form-control" name="code" [(ngModel)]="groups.code"placeholder="Enter code">
-    </div>
+
+    <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+      <mat-label>code</mat-label>
+      <input matInput type="number"#code="ngModel"required name="code"[(ngModel)]="groups.code" placeholder="09651452" >
+    </mat-form-field>
     <div *ngIf="code.invalid && (code.dirty || code.touched)"
     class="alert alert-danger">
  <div *ngIf="code.errors">
@@ -53,136 +56,133 @@
 
 <div class="row">
   <div class="col-4">
-      <div class="form-group">
-          <label class="text-danger" for="exampleInputPassword1">Name</label>
-          <input type="text" #names="ngModel"  required  class="form-control"name="names"[(ngModel)]="groups.names"  placeholder="Enter name">
-        </div>
+        <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput type="name"name="names"#names="ngModel"  required [(ngModel)]="groups.names" placeholder="EX:AJAY" >
+        </mat-form-field>
+
         <div *ngIf="names.invalid && (names.dirty || names.touched)"
         class="alert alert-danger">
      <div *ngIf="names.errors">
                  name is required
      </div>
+   
     </div>
-
-
-
-
-
-
+ 
   </div>
 
   <div class="col-4">
-    <div class="form-group">
-        <label for="exampleInputPassword1">Address</label>
-        <textarea class="form-control"name="address"[(ngModel)]="groups.address" id="exampleFormControlTextarea4"placeholder="enter address" rows="3"></textarea>
-      </div>
- </div>
-
- <div class="col-4">
-    <div class="form-group">
-        <label  for="exampleInputPassword1">pin code</label>
-        <input type="text" class="form-control" name="pincode"[(ngModel)]="groups.pincode" placeholder="Pincode">
-      </div>
- </div>
-</div>
-
-
-
-<div class="row">
-  <div class="col-4">
    
-    <mat-form-field appearance="outline"[style.width.px]=337>
-      <mat-label>Country</mat-label>
-      <mat-select [(ngModel)]="groups.country"name="country">
-        <mat-option *ngFor="let countri of country" [value]="countri.value">
-          {{countri.viewValue}}
-        </mat-option>
-      </mat-select>
+    <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+      <mat-label>Address</mat-label>
+      <textarea matInput name="address"[(ngModel)]="groups.address" placeholder="DELHI" ></textarea>
     </mat-form-field>
-    </div>
+</div>
 
- 
-  <div class="col-4 mt-2">
-   
-    <mat-form-field appearance="outline"[style.width.px]=337>
-      <mat-label>State</mat-label>
-      <mat-select [(ngModel)]="groups.state"name="state">
-        <mat-option *ngFor="let states of state" [value]="states.value">
-          {{states.viewValue}}
-        </mat-option>
-      </mat-select>
+<div class="col-4">
+
+    <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+      <mat-label>Pincode</mat-label>
+      <input matInput type="number"name="pincode"[(ngModel)]="groups.pincode" placeholder="Pincode" >
     </mat-form-field>
-    </div>
-   
-   
-    <div class="col-4">
-   
-      <mat-form-field appearance="outline"[style.width.px]=337>
-        <mat-label>City</mat-label>
-        <mat-select name="city"[(ngModel)]="groups.city" >
-          <mat-option *ngFor="let citie of city" [value]="citie.value">
-            {{citie.viewValue}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      </div>
-
-
-
-
-
-    <div class="col-4">
-        
-    </div>
-
-    <div class="col-4">
-        <div class="form-group">
-            <label for="exampleInputPassword1">Mobile number</label>
-            <input type="number" class="form-control"name="phone"[(ngModel)]="groups.phone"  placeholder="XX12454545">
-          </div>
-     </div>
-
-     <div class="col-4">
-        <div class="form-group">
-            <label  for="exampleInputPassword1">Email</label>
-            <input type="email" class="form-control"name="mail"[(ngModel)]="groups.mail" placeholder="Enter Email">
-          </div>
-     </div>
 </div>
-<br>
-<div class="row">
-    <div class="col-4">
-        <div class="form-group">
-            <label for="exampleInputPassword1">Latitude</label>
-            <input type="text" class="form-control"name="latitude" [(ngModel)]="groups.latitude"placeholder="enter latitude">
-          </div>
-    </div>
-
-    <div class="col-4">
-        <div class="form-group">
-            <label for="exampleInputPassword1">Longitude</label>
-            <input type="text" class="form-control"name="longitude"[(ngModel)]="groups.longitude" placeholder="enter longitude">
-          </div>
-     </div>
-
-     <div class="col-4 mt-2">
-
-      <mat-form-field appearance="outline"[style.width.px]=337>
-        <mat-label>Currency</mat-label>
-        <mat-select [(ngModel)]="groups.currency"name="currency" >
-          <mat-option *ngFor="let currencies of currency" [value]="currencies.value">
-            {{currencies.viewValue}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      </div>
 </div>
+
 <br>
 
 
+<div class="row">
+<div class="col-4">
 
+<mat-form-field appearance="outline"[style.width.px]=357>
+<mat-label>Country</mat-label>
+<mat-select [(ngModel)]="groups.country"name="country">
+  <mat-option *ngFor="let countri of country" [value]="countri.value">
+    {{countri.viewValue}}
+  </mat-option>
+</mat-select>
+</mat-form-field>
+</div>
+
+
+<div class="col-4">
+
+<mat-form-field appearance="outline"[style.width.px]=357>
+<mat-label>State</mat-label>
+<mat-select [(ngModel)]="groups.state"name="state">
+  <mat-option *ngFor="let states of state" [value]="states.value">
+    {{states.viewValue}}
+  </mat-option>
+</mat-select>
+</mat-form-field>
+</div>
+
+
+<div class="col-4">
+
+<mat-form-field appearance="outline"[style.width.px]=357>
+  <mat-label>City</mat-label>
+  <mat-select name="city"[(ngModel)]="groups.city" >
+    <mat-option *ngFor="let citie of city" [value]="citie.value">
+      {{citie.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+
+
+<div class="col-4">
+  
+</div>
+
+<div class="col-4">
+
+    <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+      <mat-label>Phone number</mat-label>
+      <input matInput type="number" name="phone"[(ngModel)]="groups.phone" placeholder="X1235211221" >
+    </mat-form-field>
+</div>
+
+<div class="col-4">
+    <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+      <mat-label>Email address</mat-label>
+      <input matInput type="email"name="mail"[(ngModel)]="groups.mail" placeholder="xyz@gmail.com" >
+    </mat-form-field>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-4">
+
+    <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+      <mat-label>Latitude</mat-label>
+      <input matInput type="number"name="latitude"[(ngModel)]="groups.latitude" placeholder="223.25" >
+    </mat-form-field>
+</div>
+
+<div class="col-4">
+
+    <mat-form-field [style.width.px]=357 class="example-full-width" appearance="outline">
+      <mat-label>Longitude</mat-label>
+      <input matInput type="number"name="longitude"[(ngModel)]="groups.longitude" placeholder="123.25" >
+    </mat-form-field>
+</div>
+
+<div class="col-4 ">
+
+<mat-form-field appearance="outline"[style.width.px]=357>
+  <mat-label>Currency</mat-label>
+  <mat-select [(ngModel)]="groups.currency"name="currency" >
+    <mat-option *ngFor="let currencies of currency" [value]="currencies.value">
+      {{currencies.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+
+</div>
+<br>
 </form>
-
 
 
 <div class="row">
