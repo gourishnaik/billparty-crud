@@ -26,7 +26,6 @@ interface countri {
 })
 export class EditComponent implements OnInit {
   formData: any = {};
-  //ngform:any = {};
   public groups: igroups = {} as igroups;
   public dataid: any;
   public data: any;
