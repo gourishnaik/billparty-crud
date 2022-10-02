@@ -2,6 +2,8 @@
 <div class="container-fluid">
 <h3  style="cursor: pointer;">Bill to party Master 
 
+
+
 <div class="form-outline">  
  
   <input type="text"style="width:200px;float:right; margin: -27px 65px 4px 0px; padding-top: 6px;"[(ngModel)]="userFilter.names"class="form-control" placeholder=" search data">
@@ -29,6 +31,9 @@
         <th scope="col"style="color:grey;">PAN</th>
       </tr>
     </thead>
+
+ 
+
     <tbody>
       <tr *ngFor ="let user of alluser |filterBy:userFilter">
         <td > <a routerLink="/watchdata/view/{{user.id}}"> <i style="color:green;margin-right: 5px;"class="fa fa-eye" aria-hidden="true"></i> </a>
@@ -49,9 +54,16 @@
         <td>{{user.pannumber}}</td>
         
       </tr>
-     
+
+
    <br>
     </tbody>
   </table>
 </div>
 
+
+        <!--loading spinner-->
+        <div *ngIf="!loading" > 
+          <h1 class="text-center text-danger mt-3">Please wait Loading data</h1>
+        <app-spinner> </app-spinner>
+          </div>

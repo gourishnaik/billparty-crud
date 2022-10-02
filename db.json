@@ -27,7 +27,7 @@
   ],
   "users": [
     {
-      "gst": "CHTAGSY",
+      "gst": "CHTAGSG",
       "pannumber": "SHSYYJAJ",
       "code": 12124,
       "names": "Gourish",
@@ -40,7 +40,7 @@
       "mail": "max@gmail.com",
       "latitude": "141",
       "longitude": "121",
-      "currency": "dollar",
+      "currency": "rupee",
       "id": 1
     },
     {
@@ -282,20 +282,20 @@
       "id": 16
     },
     {
-      "gst": "FGHDID123",
-      "pannumber": "MFHSJ5858",
-      "code": 1326526,
-      "names": "rayan",
-      "address": "mahesh karwar",
-      "pincode": 252526,
+      "gst": "HDJDKDK",
+      "pannumber": "DWDDSDS",
+      "code": 55536,
+      "names": "naresh",
+      "address": "diu",
+      "pincode": 125645,
       "country": "india",
       "state": "goa",
-      "city": "panjim",
-      "phone": 9636985656,
-      "mail": "gdfes@gmail.com",
-      "latitude": "121",
-      "longitude": "525",
-      "currency": "dollar",
+      "city": "bangaluru",
+      "phone": 255215256,
+      "mail": "dm@gmail.com",
+      "latitude": 323,
+      "longitude": 2323,
+      "currency": "yen",
       "id": 17
     }
   ]

@@ -14,13 +14,15 @@ import { WatchdataComponent } from './components/watchdata/watchdata.component';
 import { EditComponent } from './components/edit/edit.component'
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import {MatInputModule} from '@angular/material/input';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 @NgModule({
   declarations: [
     AppComponent,
     AddComponent,
     ViewComponent,
     WatchdataComponent,
-    EditComponent
+    EditComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
